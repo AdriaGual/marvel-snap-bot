@@ -1,0 +1,166 @@
+01/01/2023 12:02:08 PM Connection result: already connected to 127.0.0.1:5555
+
+01/01/2023 12:02:08 PM ---------------------
+01/01/2023 12:02:08 PM Picture: 0
+01/01/2023 12:02:10 PM [get_my_hand_cards] Time elapsed: 0:00:01.705760
+01/01/2023 12:02:10 PM Hand_cards: 
+01/01/2023 12:02:10 PM []
+01/01/2023 12:02:10 PM [get_fields] Time elapsed: 0:00:00.219200
+01/01/2023 12:02:10 PM Acive fields: 
+01/01/2023 12:02:10 PM ['first_field: First field', 'second_field: Second field', 'third_field: Third field']
+01/01/2023 12:02:10 PM [get_player_fields_cards] Time elapsed: 0:00:00.001086
+01/01/2023 12:02:10 PM Player field cards:
+01/01/2023 12:02:10 PM ---------------------------
+01/01/2023 12:02:10 PM | |x|x| || |-|-| || |-|-| |
+01/01/2023 12:02:10 PM | |-|-| || |-|x| || |x|-| |
+01/01/2023 12:02:10 PM ---------------------------
+01/01/2023 12:02:10 PM [get_mana] Time elapsed: 0:00:00.007516
+01/01/2023 12:02:10 PM remaining_mana: 0
+01/01/2023 12:02:10 PM [get_turn] Time elapsed: 0:00:00.014868
+01/01/2023 12:02:10 PM turn: 0
+01/01/2023 12:02:12 PM ---------------------
+01/01/2023 12:02:12 PM Picture: 1
+01/01/2023 12:02:15 PM [get_my_hand_cards] Time elapsed: 0:00:01.764652
+01/01/2023 12:02:15 PM Hand_cards: 
+01/01/2023 12:02:15 PM []
+01/01/2023 12:02:15 PM [get_fields] Time elapsed: 0:00:00.176482
+01/01/2023 12:02:15 PM Acive fields: 
+01/01/2023 12:02:15 PM ['first_field: First field', 'second_field: Second field', 'third_field: Third field']
+01/01/2023 12:02:15 PM [get_player_fields_cards] Time elapsed: 0:00:00.000949
+01/01/2023 12:02:15 PM Player field cards:
+01/01/2023 12:02:15 PM ---------------------------
+01/01/2023 12:02:15 PM | |-|-| || |-|-| || |-|-| |
+01/01/2023 12:02:15 PM | |-|-| || |-|-| || |-|-| |
+01/01/2023 12:02:15 PM ---------------------------
+01/01/2023 12:02:15 PM [get_mana] Time elapsed: 0:00:00.004908
+01/01/2023 12:02:15 PM remaining_mana: 0
+01/01/2023 12:02:15 PM [get_turn] Time elapsed: 0:00:00.012939
+01/01/2023 12:02:15 PM turn: 0
+01/01/2023 12:02:17 PM ---------------------
+01/01/2023 12:02:17 PM Picture: 2
+01/01/2023 12:02:19 PM [get_my_hand_cards] Time elapsed: 0:00:01.824460
+01/01/2023 12:02:19 PM Hand_cards: 
+01/01/2023 12:02:19 PM []
+01/01/2023 12:02:19 PM [get_fields] Time elapsed: 0:00:00.190963
+01/01/2023 12:02:19 PM Acive fields: 
+01/01/2023 12:02:19 PM ['first_field: First field', 'second_field: Second field', 'third_field: Third field']
+01/01/2023 12:02:19 PM [get_player_fields_cards] Time elapsed: 0:00:00.000921
+01/01/2023 12:02:19 PM Player field cards:
+01/01/2023 12:02:19 PM ---------------------------
+01/01/2023 12:02:19 PM | |-|-| || |-|-| || |-|-| |
+01/01/2023 12:02:19 PM | |-|-| || |-|-| || |-|-| |
+01/01/2023 12:02:19 PM ---------------------------
+01/01/2023 12:02:19 PM [get_mana] Time elapsed: 0:00:00.005299
+01/01/2023 12:02:19 PM remaining_mana: 0
+01/01/2023 12:02:19 PM [get_turn] Time elapsed: 0:00:00.010809
+01/01/2023 12:02:19 PM turn: 0
+01/01/2023 12:02:22 PM ---------------------
+01/01/2023 12:02:22 PM Picture: 3
+01/01/2023 12:02:24 PM [get_my_hand_cards] Time elapsed: 0:00:01.681853
+01/01/2023 12:02:24 PM Hand_cards: 
+01/01/2023 12:02:24 PM ['kaazar']
+01/01/2023 12:02:24 PM [get_fields] Time elapsed: 0:00:00.169033
+01/01/2023 12:02:24 PM Acive fields: 
+01/01/2023 12:02:24 PM ['first_field: First field', 'second_field: Second field', 'third_field: Third field']
+01/01/2023 12:02:24 PM [get_player_fields_cards] Time elapsed: 0:00:00.000921
+01/01/2023 12:02:24 PM Player field cards:
+01/01/2023 12:02:24 PM ---------------------------
+01/01/2023 12:02:24 PM | |-|-| || |x|x| || |-|-| |
+01/01/2023 12:02:24 PM | |-|-| || |-|-| || |-|-| |
+01/01/2023 12:02:24 PM ---------------------------
+01/01/2023 12:02:24 PM [get_mana] Time elapsed: 0:00:00.005271
+01/01/2023 12:02:24 PM remaining_mana: 0
+01/01/2023 12:02:24 PM [get_turn] Time elapsed: 0:00:00.010546
+01/01/2023 12:02:24 PM turn: 0
+01/01/2023 12:05:09 PM Connection result: already connected to 127.0.0.1:5555
+
+01/01/2023 12:05:09 PM ---------------------
+01/01/2023 12:05:09 PM Picture: 0
+01/01/2023 12:05:11 PM [get_my_hand_cards] Time elapsed: 0:00:01.688114
+01/01/2023 12:05:11 PM Hand_cards: 
+01/01/2023 12:05:11 PM []
+01/01/2023 12:05:11 PM [get_fields] Time elapsed: 0:00:00.186494
+01/01/2023 12:05:11 PM Acive fields: 
+01/01/2023 12:05:11 PM ['first_field: First field', 'second_field: Second field', 'third_field: Third field']
+01/01/2023 12:05:11 PM [get_player_fields_cards] Time elapsed: 0:00:00.000875
+01/01/2023 12:05:11 PM Player field cards:
+01/01/2023 12:05:11 PM ---------------------------
+01/01/2023 12:05:11 PM | |-|-| || |-|-| || |-|-| |
+01/01/2023 12:05:11 PM | |-|-| || |-|-| || |-|-| |
+01/01/2023 12:05:11 PM ---------------------------
+01/01/2023 12:05:11 PM [get_mana] Time elapsed: 0:00:00.005845
+01/01/2023 12:05:11 PM remaining_mana: 0
+01/01/2023 12:05:11 PM [get_turn] Time elapsed: 0:00:00.013170
+01/01/2023 12:05:11 PM turn: 0
+01/01/2023 12:05:13 PM ---------------------
+01/01/2023 12:05:13 PM Picture: 1
+01/01/2023 12:05:16 PM [get_my_hand_cards] Time elapsed: 0:00:01.892701
+01/01/2023 12:05:16 PM Hand_cards: 
+01/01/2023 12:05:16 PM ['kaazar']
+01/01/2023 12:05:16 PM [get_fields] Time elapsed: 0:00:00.203175
+01/01/2023 12:05:16 PM Acive fields: 
+01/01/2023 12:05:16 PM ['first_field: First field', 'second_field: Second field', 'third_field: Third field']
+01/01/2023 12:05:16 PM [get_player_fields_cards] Time elapsed: 0:00:00.001202
+01/01/2023 12:05:16 PM Player field cards:
+01/01/2023 12:05:16 PM ---------------------------
+01/01/2023 12:05:16 PM | |-|-| || |x|x| || |-|-| |
+01/01/2023 12:05:16 PM | |-|-| || |-|-| || |-|-| |
+01/01/2023 12:05:16 PM ---------------------------
+01/01/2023 12:05:16 PM [get_mana] Time elapsed: 0:00:00.005189
+01/01/2023 12:05:16 PM remaining_mana: 0
+01/01/2023 12:05:16 PM [get_turn] Time elapsed: 0:00:00.012818
+01/01/2023 12:05:16 PM turn: 0
+01/01/2023 12:05:18 PM ---------------------
+01/01/2023 12:05:18 PM Picture: 2
+01/01/2023 12:05:20 PM [get_my_hand_cards] Time elapsed: 0:00:01.686075
+01/01/2023 12:05:20 PM Hand_cards: 
+01/01/2023 12:05:20 PM []
+01/01/2023 12:05:21 PM [get_fields] Time elapsed: 0:00:00.179544
+01/01/2023 12:05:21 PM Acive fields: 
+01/01/2023 12:05:21 PM ['first_field: First field', 'second_field: Second field', 'third_field: Third field']
+01/01/2023 12:05:21 PM [get_player_fields_cards] Time elapsed: 0:00:00.000949
+01/01/2023 12:05:21 PM Player field cards:
+01/01/2023 12:05:21 PM ---------------------------
+01/01/2023 12:05:21 PM | |-|-| || |-|-| || |-|-| |
+01/01/2023 12:05:21 PM | |-|-| || |x|x| || |-|-| |
+01/01/2023 12:05:21 PM ---------------------------
+01/01/2023 12:05:21 PM [get_mana] Time elapsed: 0:00:00.004921
+01/01/2023 12:05:21 PM remaining_mana: 0
+01/01/2023 12:05:21 PM [get_turn] Time elapsed: 0:00:00.010441
+01/01/2023 12:05:21 PM turn: 0
+01/01/2023 12:05:23 PM ---------------------
+01/01/2023 12:05:23 PM Picture: 3
+01/01/2023 12:05:25 PM [get_my_hand_cards] Time elapsed: 0:00:01.652741
+01/01/2023 12:05:25 PM Hand_cards: 
+01/01/2023 12:05:25 PM []
+01/01/2023 12:05:25 PM [get_fields] Time elapsed: 0:00:00.177936
+01/01/2023 12:05:25 PM Acive fields: 
+01/01/2023 12:05:25 PM ['first_field: First field', 'second_field: Second field', 'third_field: Third field']
+01/01/2023 12:05:25 PM [get_player_fields_cards] Time elapsed: 0:00:00.000923
+01/01/2023 12:05:25 PM Player field cards:
+01/01/2023 12:05:25 PM ---------------------------
+01/01/2023 12:05:25 PM | |-|-| || |-|-| || |-|-| |
+01/01/2023 12:05:25 PM | |-|-| || |x|x| || |-|-| |
+01/01/2023 12:05:25 PM ---------------------------
+01/01/2023 12:05:25 PM [get_mana] Time elapsed: 0:00:00.005025
+01/01/2023 12:05:25 PM remaining_mana: 0
+01/01/2023 12:05:25 PM [get_turn] Time elapsed: 0:00:00.011054
+01/01/2023 12:05:25 PM turn: 0
+01/01/2023 12:05:27 PM ---------------------
+01/01/2023 12:05:27 PM Picture: 4
+01/01/2023 12:05:29 PM [get_my_hand_cards] Time elapsed: 0:00:01.648139
+01/01/2023 12:05:29 PM Hand_cards: 
+01/01/2023 12:05:29 PM []
+01/01/2023 12:05:30 PM [get_fields] Time elapsed: 0:00:00.163580
+01/01/2023 12:05:30 PM Acive fields: 
+01/01/2023 12:05:30 PM ['first_field: First field', 'second_field: Second field', 'third_field: Third field']
+01/01/2023 12:05:30 PM [get_player_fields_cards] Time elapsed: 0:00:00.001195
+01/01/2023 12:05:30 PM Player field cards:
+01/01/2023 12:05:30 PM ---------------------------
+01/01/2023 12:05:30 PM | |-|-| || |-|-| || |-|-| |
+01/01/2023 12:05:30 PM | |-|-| || |-|-| || |-|-| |
+01/01/2023 12:05:30 PM ---------------------------
+01/01/2023 12:05:30 PM [get_mana] Time elapsed: 0:00:00.004645
+01/01/2023 12:05:30 PM remaining_mana: 0
+01/01/2023 12:05:30 PM [get_turn] Time elapsed: 0:00:00.009755
+01/01/2023 12:05:30 PM turn: 0

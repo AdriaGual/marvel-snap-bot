@@ -1,11 +1,11 @@
-import base64
 import os
 import time
 import cv2
-import numpy as np
 import logging
 import subprocess
 import config
+from datetime import timedelta
+from timeit import default_timer as timer
 
 
 # Take screenshot and return it in cv2 format
@@ -31,11 +31,11 @@ def search(haystack_image_path, screenshot, precision=0):
         return [0, [0, 0], None]
 
 
+# Checks if a haystack image from a folder exists in the screenshot
 def search_in_folder(folder_path, screenshot):
     for card_haystack in os.listdir(folder_path):
         searched_image = search(folder_path+"\\"+card_haystack, screenshot)
         if searched_image[0] == 1:
-            #print("Haystack image found: " + folder_path.rsplit('\\')[-1])
             return searched_image
     return [0]
 
@@ -98,3 +98,19 @@ def draw(screenshot, search_haystack_image, name, colors):
         return screenshot
     else:
         return screenshot
+
+
+# Start the timer for the elapsed time
+def start_timer():
+    return timer()
+
+
+# End the timer for the elapsed time
+def end_timer():
+    return timer()
+
+
+# Log the time elapsed of the function
+def log_time_elapsed(function, time):
+    logging.info("["+function+"] Time elapsed: " +
+                 str(timedelta(seconds=time)))
