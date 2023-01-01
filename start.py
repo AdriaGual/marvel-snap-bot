@@ -9,7 +9,7 @@ import mana
 import turn
 
 
-logging.basicConfig(filename='log.txt', filemode='a', format='%(asctime)s %(message)s',
+logging.basicConfig(filename='log.txt', filemode='w', format='%(asctime)s %(message)s',
                     datefmt='%m/%d/%Y %I:%M:%S %p', level=logging.INFO)
 logging.getLogger().addHandler(logging.StreamHandler())
 

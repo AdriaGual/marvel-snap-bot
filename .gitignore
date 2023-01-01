@@ -3,3 +3,4 @@ images/
 logs/
 __pycache__/
 tmp/
+/log.txt
