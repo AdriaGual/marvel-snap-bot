@@ -37,7 +37,7 @@ def get_fields(screenshot, screenshot_dimensions, show_image):
 
 # Outputs the fields found
 def log_fields(fields):
-    logging.info('Acive fields: ')
+    logging.info('* Acive fields: ')
     available_fields = []
     for field in fields.keys():
         available_fields.append(field + ": " + fields[field]['name'])

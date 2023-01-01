@@ -38,7 +38,7 @@ def get_player_fields_cards(screenshot, screenshot_dimensions):
 
 # Outputs field cards
 def log_player_fields_cards(player_played_cards):
-    logging.info("Player field cards:")
+    logging.info("* Player field cards:")
     logging.info("---------------------------")
     logging.info("| |" + str(player_played_cards[0])+"|"+str(player_played_cards[1]) +
                  "| ||"+" |" + str(player_played_cards[4])+"|"+str(player_played_cards[5])+"| ||"+" |" + str(player_played_cards[8])+"|"+str(player_played_cards[9]) +
