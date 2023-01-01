@@ -6,7 +6,7 @@ default_config = {
     'priority_cards': []
 }
 
-field_list = {
+list = {
     'hells_kitchen': default_config,
     'ruins': default_config,
     'xandar': {

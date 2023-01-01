@@ -1,5 +1,5 @@
 import cp_list
-import field_cp
+import field_list
 
 
 def check_field_available(field):
@@ -49,14 +49,14 @@ def calc_play(play_info):
         for field in active_fields:
             field_name = active_fields[field]['name']
             print(field_name)
-            if field_cp.field_list[field_name]['priority'] > priority and field_cp.field_list[field_name]['min_play'] == 1:
-                priority = field_cp.field_list[field_name]['priority']
+            if field_list.list[field_name]['priority'] > priority and field_list.list[field_name]['min_play'] == 1:
+                priority = field_list.list[field_name]['priority']
                 priority_field = active_fields[field]
         return [1, card_to_play[1], priority_field['move_to']]
     elif len(active_fields.keys()) == 1:
         for field in active_fields.keys():
             field_name = active_fields[field]['name']
-            if field_cp.field_list[field_name]['min_play'] == 1:
+            if field_list.list[field_name]['min_play'] == 1:
                 return [1, card_to_play[1], active_fields[field]['move_to']]
             else:
                 return [0, 0, 0]
