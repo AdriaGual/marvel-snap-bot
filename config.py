@@ -5,26 +5,30 @@ fields_folder = "F:\\WebPages\\Bots\\marvelSnapBot\\images\\fields"
 mana_folder = "F:\\WebPages\\Bots\\marvelSnapBot\\images\\mana"
 turns_folder = "F:\\WebPages\\Bots\\marvelSnapBot\\images\\turns"
 data_folder = "F:\\WebPages\\Bots\\marvelSnapBot\\data"
+tmp_path = 'F:\\WebPages\\Bots\\marvelSnapBot\\tmp'
 first_field = {
     'name': 'First field',
     'x1': 610,
     'x2': 700,
     'y1': 100,
     'y2': 1500,
+    'move_to': [198, 1036],
 }
 second_field = {
-    'name': 'Second field',
+    'name': 'next_turn',
     'x1': 600,
     'x2': 720,
     'y1': 350,
     'y2': 350,
+    'move_to': [455, 1036],
 }
 third_field = {
-    'name': 'Third field',
+    'name': 'next_2_turns',
     'x1': 610,
     'x2': 700,
     'y1': 600,
     'y2': 90,
+    'move_to': [711, 1036],
 }
 fields = {
     'first_field': first_field,

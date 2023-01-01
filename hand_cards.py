@@ -22,7 +22,7 @@ def get_my_hand_cards(screenshot, screenshot_dimensions, counter, show_image):
             my_cards = global_utils.draw(
                 my_cards, searched_card, card_folder, [random.randint(100, 255), random.randint(100, 255), random.randint(100, 255)])
             cv2.imwrite(file_name, my_cards)
-            found_cards.append(card_folder)
+            found_cards.append([card_folder, searched_card[1]])
     if show_image:
         cv2.imshow("My cards", my_cards)
     end = global_utils.end_timer()
@@ -34,4 +34,5 @@ def get_my_hand_cards(screenshot, screenshot_dimensions, counter, show_image):
 # Outputs the hand cards
 def log_hand_cards(hand_cards):
     logging.info("Hand_cards: ")
-    logging.info(hand_cards)
+    for hand_card in hand_cards:
+        logging.info(hand_card[0])

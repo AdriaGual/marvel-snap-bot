@@ -33,11 +33,11 @@ def get_info(counter):
 
     # Detect my cards
     my_hand_cards = hand_cards.get_my_hand_cards(
-        screenshot, screenshot_dimensions, counter, False)
+        screenshot, screenshot_dimensions, counter, True)
     hand_cards.log_hand_cards(my_hand_cards)
 
     # Detect fields
-    active_fields = fields.get_fields(screenshot, screenshot_dimensions, False)
+    active_fields = fields.get_fields(screenshot, screenshot_dimensions, True)
     fields.log_fields(active_fields)
 
     # Detect field cards
@@ -49,7 +49,7 @@ def get_info(counter):
     counter += 1
     return {
         'player_turn': player_turn,
-        'remaining_mana': remaining_mana,
+        'mana': remaining_mana,
         'my_hand_cards': my_hand_cards,
         'active_fields': active_fields,
         'player_played_cards': player_played_cards,
