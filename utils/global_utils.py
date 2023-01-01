@@ -16,13 +16,16 @@ def take_screenshot(name):
 
 
 # Search if the haystack image is a subimage of the current image
-def search(haystack_image_path, screenshot):
+def search(haystack_image_path, screenshot, precision=0):
     method = cv2.TM_SQDIFF_NORMED
     haystack_image = cv2.imread(haystack_image_path)
     result = cv2.matchTemplate(haystack_image, screenshot, method)
     min_val, _, min_loc, _ = cv2.minMaxLoc(result)
     mp_x, mp_y = min_loc
-    if min_val < 0.16:
+    threshold = 0.16
+    if precision:
+        threshold = 0.03
+    if min_val < threshold:
         return [1, [mp_x, mp_y], haystack_image]
     else:
         return [0, [0, 0], None]
