@@ -28,7 +28,6 @@
   <a href="#improvements">Improvements</a>
 </p>
 
-![screenshot](https://raw.githubusercontent.com/amitmerchant1990/electron-markdownify/master/app/img/markdownify.gif)
 ![Capture](https://user-images.githubusercontent.com/25803231/210183326-e543da5a-ef14-44e5-8cd5-770eec453c02.PNG)
 
 ## Key Features
