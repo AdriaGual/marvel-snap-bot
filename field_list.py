@@ -126,6 +126,7 @@ list = {
     'savage_land': default_config,
     'sokovia': default_config,
     'the_hub': default_config,
+    'weirdworld': default_config,
     'kyln':  {
         'priority': 2,
         'min_play': 0,
@@ -154,7 +155,9 @@ list = {
         'play_cards_here_turn': -1,
         'priority_cards': []
     },
-    'the_raft':  {
+    'the_raft': default_config,
+    'wakanda': default_config,
+    'dream_dimension':  {
         'priority': 2,
         'min_play': 0,
         'same_location': False,

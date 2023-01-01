@@ -55,13 +55,13 @@ def click(position):
 # Swipe from a position a to a position b
 def drag(position_1, position_2):
     subprocess.call(
-        ["adb", "-s", "127.0.0.1:5555", "shell", "input", "touchscreen", "swipe", str(position_1[0]), str(position_1[1]), str(position_2[0]), str(position_2[1]), str(1000)], stdout=subprocess.PIPE, shell=True)
+        ["adb", "-s", "127.0.0.1:5555", "shell", "input", "touchscreen", "swipe", str(position_1[0]), str(position_1[1]), str(position_2[0]), str(position_2[1]), str(250)], stdout=subprocess.PIPE, shell=True)
 
 
 # Find and click if found a subimage
 # Returns 1 if it found the image and clicked on it, otherwise 0
-def find_and_click(haystack_image_path):
-    search_haystack_image = search(haystack_image_path)
+def find_and_click(haystack_image_path, screenshot):
+    search_haystack_image = search(haystack_image_path, screenshot)
     if search_haystack_image[0] == 1:
         click(search_haystack_image[1])
         return 1

@@ -20,8 +20,8 @@ def get_player_fields_cards(screenshot, screenshot_dimensions):
         ]
         for card in fields_my_played_cards[my_played_cards]['cards']:
             max_score = 0
-            for x in range(10):
-                for y in range(10):
+            for x in range(20):
+                for y in range(20):
                     score = screenshot[fields_my_played_cards[my_played_cards]['cards'][card]
                                        [1]+x, fields_my_played_cards[my_played_cards]['cards'][card][0]+y][2]
                     if score > max_score:

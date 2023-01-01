@@ -44,3 +44,11 @@ def try_to_play_every_card(cards, fields):
         for field in fields.keys():
             global_utils.drag(
                 [card[1][0]+20, card[1][1]+1200], fields[field]['move_to'])
+
+
+def play_random_cards(play_info):
+    try_to_play_every_card(
+        play_info['my_hand_cards'], play_info['active_fields'])
+    try_to_play_every_card(
+        [['', [451, 100]]], play_info['active_fields'])
+    global_utils.click([755, 1487])

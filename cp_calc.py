@@ -1,5 +1,6 @@
 import cp_list
 import field_list
+import random
 
 
 def check_field_available(field):
@@ -56,6 +57,10 @@ def calc_play(play_info):
             if field_list.list[field_name]['priority'] > priority and field_list.list[field_name]['min_play'] == 1:
                 priority = field_list.list[field_name]['priority']
                 priority_field = active_fields[field]
+            elif field_list.list[field_name]['priority'] == priority:
+                if random.randint(0, 1):
+                    priority = field_list.list[field_name]['priority']
+                    priority_field = active_fields[field]
         if priority_field:
             return [1, card_to_play[1], priority_field['move_to'], play_info]
         else:

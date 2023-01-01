@@ -48,7 +48,7 @@ first_terrain_my_played_cards = {
         'first_card': [172, 906],
         'second_card': [270, 910],
         'third_card': [164, 1050],
-        'forth_card': [270, 1050],
+        'forth_card': [270, 1046],
     },
 }
 second_terrain_my_played_cards = {

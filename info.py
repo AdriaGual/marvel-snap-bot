@@ -6,6 +6,8 @@ import fields
 import field_cards
 import mana
 import turn
+import time
+import config
 
 
 # Gets all the possible information from the screen
@@ -23,6 +25,20 @@ def get_info(counter):
     screenshot = global_utils.take_screenshot("tmp\\"+str(counter)+".png")
     screenshot_dimensions = screenshot.shape
 
+    # Go to the play screen if not already
+    global_utils.find_and_click(
+        config.project_path+'\\images\\go_to_play_button.png', screenshot)
+
+    # Go to the play
+    global_utils.find_and_click(
+        config.project_path+'\\images\\play_button.png', screenshot)
+
+    global_utils.find_and_click(
+        config.project_path+'\\images\\next_button.png', screenshot)
+
+    global_utils.find_and_click(
+        config.project_path+'\\images\\turns\\collect_rewards.png', screenshot)
+
     # Detect turn
     player_turn = turn.get_turn(screenshot, screenshot_dimensions, False)
     logging.info('* Turn: ' + str(player_turn))
@@ -33,11 +49,11 @@ def get_info(counter):
 
     # Detect my cards
     my_hand_cards = hand_cards.get_my_hand_cards(
-        screenshot, screenshot_dimensions, counter, True)
+        screenshot, screenshot_dimensions, counter, False)
     hand_cards.log_hand_cards(my_hand_cards)
 
     # Detect fields
-    active_fields = fields.get_fields(screenshot, screenshot_dimensions, True)
+    active_fields = fields.get_fields(screenshot, screenshot_dimensions, False)
     fields.log_fields(active_fields)
 
     # Detect field cards
