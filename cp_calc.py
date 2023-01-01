@@ -64,7 +64,6 @@ def calc_play(play_info):
         if priority_field:
             return [1, card_to_play[1], priority_field['move_to'], play_info]
         else:
-            print(active_fields[0])
             return [1, card_to_play[1], active_fields[active_fields.keys()[0]]['move_to'], play_info]
     elif len(active_fields.keys()) == 1:
         for field in active_fields.keys():

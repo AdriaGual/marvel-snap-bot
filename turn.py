@@ -8,15 +8,15 @@ import random
 # Give a screenshot, returns the player turn
 def get_turn(screenshot, screenshot_dimensions, show_image):
     start = global_utils.start_timer()
-    turn = config.turn
+    config_turn = config.turn
     actual_turn = 0
     turn = screenshot[
-        turn['y1']:
+        config_turn['y1']:
         screenshot_dimensions[0] -
-        turn['y2'],
-        turn['x1']:
+        config_turn['y2'],
+        config_turn['x1']:
         screenshot_dimensions[1] -
-        turn['x2']
+        config_turn['x2']
     ]
     for turn_haystack in os.listdir(config.turns_folder):
         # Searching for a field in the folder.

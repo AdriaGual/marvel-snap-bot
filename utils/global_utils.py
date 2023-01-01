@@ -75,6 +75,12 @@ def wait_until_gone(haystack_image_path):
         time.sleep(1)
 
 
+# Wait until the image is found
+def wait_until_found(haystack_image_path, screenshot):
+    while not search(haystack_image_path, screenshot, False)[0]:
+        time.sleep(1)
+
+
 # Draw a rectangle to the image
 def draw(screenshot, search_haystack_image, name, colors):
     if search_haystack_image[0] == 1:

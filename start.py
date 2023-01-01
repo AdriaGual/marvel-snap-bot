@@ -4,6 +4,9 @@ import info
 import cp_calc
 import hand_cards
 import time
+import config
+import turn
+import cv2
 
 logging.basicConfig(filename='log.txt', filemode='w', format='%(asctime)s %(message)s',
                     datefmt='%m/%d/%Y %I:%M:%S %p', level=logging.INFO)
@@ -14,7 +17,37 @@ android_connection.connect()
 counter = 0
 while 1:
     global_utils.click([284, 46])
-    play_info = info.get_info(counter)
+    # Take a screenhot and get its dimensions
+    screenshot = global_utils.take_screenshot("tmp\\"+str(counter)+".png")
+    screenshot_dimensions = screenshot.shape
+    # Go to the play screen if not already
+    global_utils.find_and_click(
+        config.project_path+'\\images\\go_to_play_button.png', screenshot)
+
+    # Go to the play
+    global_utils.find_and_click(
+        config.project_path+'\\images\\play_button.png', screenshot)
+
+    global_utils.find_and_click(
+        config.project_path+'\\images\\next_button.png', screenshot)
+
+    global_utils.find_and_click(
+        config.project_path+'\\images\\turns\\collect_rewards.png', screenshot)
+
+    player_turn = turn.get_turn(screenshot, screenshot_dimensions, False)
+    while player_turn == 0:
+        screenshot = global_utils.take_screenshot("tmp\\"+str(counter)+".png")
+        screenshot_dimensions = screenshot.shape
+        player_turn = turn.get_turn(screenshot, screenshot_dimensions, False)
+        global_utils.find_and_click(
+            config.project_path+'\\images\\play_button.png', screenshot)
+
+        global_utils.find_and_click(
+            config.project_path+'\\images\\next_button.png', screenshot)
+        time.sleep(0.5)
+
+    play_info = info.get_info(
+        counter, screenshot, screenshot_dimensions, player_turn)
     counter = play_info['counter']
     if play_info['player_turn'] != 0:
         if play_info['mana'] > 0:
