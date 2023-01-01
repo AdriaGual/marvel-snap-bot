@@ -14,10 +14,10 @@
          alt="Python">
   </a>
   <a href="https://img.shields.io/github/repo-size/AdriaGual/marvel-snap-bot">
-    <img src="https://badges.gitter.im/amitmerchant1990/electron-markdownify.svg">
+    <img src="https://img.shields.io/github/repo-size/AdriaGual/marvel-snap-bot">
   </a>
   <a href="https://pypi.org/">
-      <img src="https://img.shields.io/badge/SayThanks.io-%E2%98%BC-1EAEDB.svg">
+      <img src="https://img.shields.io/pypi/v/nine">
   </a>
   <a href="https://opensource.org/licenses/MIT">
     <img src="https://badgen.net/pypi/license/pip">
