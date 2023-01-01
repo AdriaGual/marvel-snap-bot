@@ -125,6 +125,49 @@ list = {
     'throne_room': default_config,
     'savage_land': default_config,
     'sokovia': default_config,
+    'the_hub': default_config,
+    'kyln':  {
+        'priority': 2,
+        'min_play': 0,
+        'same_location': False,
+        'play_cards_here_turn': 4,
+        'priority_cards': []
+    },
+    'shuris_lab':  {
+        'priority': 2,
+        'min_play': 0,
+        'same_location': False,
+        'play_cards_here_turn': -1,
+        'priority_cards': []
+    },
+    'sewer_system':  {
+        'priority': -2,
+        'min_play': 0,
+        'same_location': False,
+        'play_cards_here_turn': -1,
+        'priority_cards': []
+    },
+    'the_superflow':  {
+        'priority': -3,
+        'min_play': 0,
+        'same_location': False,
+        'play_cards_here_turn': -1,
+        'priority_cards': []
+    },
+    'the_raft':  {
+        'priority': 2,
+        'min_play': 0,
+        'same_location': False,
+        'play_cards_here_turn': -1,
+        'priority_cards': []
+    },
+    'baxter_building': {
+        'priority': 2,
+        'min_play': 0,
+        'same_location': False,
+        'play_cards_here_turn': -1,
+        'priority_cards': []
+    },
     'flooded': {
         'priority': -3,
         'min_play': 0,

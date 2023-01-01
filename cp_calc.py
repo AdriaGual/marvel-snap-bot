@@ -31,14 +31,18 @@ def remove_full_fields(play_info):
 def calc_play(play_info):
     max_cp_play = 0
     card_to_play = None
-
+    mana = play_info['mana']
     # Pick the card to play
     for hand_card in play_info['my_hand_cards']:
         if cp_list.cps[hand_card[0]]['average_cp'] > max_cp_play and cp_list.cps[hand_card[0]]['mana'] <= play_info['mana']:
             max_cp_play = cp_list.cps[hand_card[0]]['average_cp']
             card_to_play = hand_card
+            mana -= cp_list.cps[hand_card[0]]['mana']
+    play_info['mana'] = mana
+    if card_to_play in play_info['my_hand_cards']:
+        play_info['my_hand_cards'].remove(card_to_play)
     if not card_to_play:
-        return [0, 0, 0]
+        return [0, 0, 0, play_info]
     print(card_to_play)
 
     # Pick field to play the card
@@ -52,14 +56,17 @@ def calc_play(play_info):
             if field_list.list[field_name]['priority'] > priority and field_list.list[field_name]['min_play'] == 1:
                 priority = field_list.list[field_name]['priority']
                 priority_field = active_fields[field]
-        return [1, card_to_play[1], priority_field['move_to']]
+        if priority_field:
+            return [1, card_to_play[1], priority_field['move_to'], play_info]
+        else:
+            print(active_fields[0])
+            return [1, card_to_play[1], active_fields[active_fields.keys()[0]]['move_to'], play_info]
     elif len(active_fields.keys()) == 1:
         for field in active_fields.keys():
             field_name = active_fields[field]['name']
             if field_list.list[field_name]['min_play'] == 1:
-                return [1, card_to_play[1], active_fields[field]['move_to']]
+                return [1, card_to_play[1], active_fields[field]['move_to'], play_info]
             else:
-                return [0, 0, 0]
+                return [0, 0, 0, play_info]
     else:
-        return [0, 0, 0]
-    return 1
+        return [0, 0, 0, play_info]

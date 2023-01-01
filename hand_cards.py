@@ -36,3 +36,11 @@ def log_hand_cards(hand_cards):
     logging.info("Hand_cards: ")
     for hand_card in hand_cards:
         logging.info(hand_card[0])
+
+
+# Try every card
+def try_to_play_every_card(cards, fields):
+    for card in cards:
+        for field in fields.keys():
+            global_utils.drag(
+                [card[1][0]+20, card[1][1]+1200], fields[field]['move_to'])
