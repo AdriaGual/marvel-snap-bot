@@ -26,7 +26,7 @@ def get_turn(screenshot, screenshot_dimensions, show_image):
             searched_turn_image = global_utils.draw(
                 turn, searched_turn, turn_haystack[:-4], [random.randint(100, 255), random.randint(100, 255), random.randint(100, 255)])
             if show_image:
-                cv2.imshow(turn_haystack[:-4], searched_turn_image)
+                cv2.imshow('turn', searched_turn_image)
             if turn_haystack[0] != 'f' and turn_haystack[0] != "c":
                 if int(turn_haystack[0]) > actual_turn:
                     actual_turn = int(turn_haystack[0])
