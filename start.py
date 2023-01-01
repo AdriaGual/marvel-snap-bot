@@ -11,7 +11,7 @@ import random
 
 
 # Given a screenshot of the hand cards, returns a list of the detected cards
-def detect_my_hand_cards(screenshot, screenshot_dimensions):
+def detect_my_hand_cards(screenshot, screenshot_dimensions, show_image):
     file_name = config.project_path+"\\tmp\\" + str(counter)+".png"
     my_cards = screenshot[config.card_hand['x']:screenshot_dimensions[0] -
                           config.card_hand['y'], 0:screenshot_dimensions[1]]
@@ -26,7 +26,8 @@ def detect_my_hand_cards(screenshot, screenshot_dimensions):
                 my_cards, searched_card, card_folder, [random.randint(100, 255), random.randint(100, 255), random.randint(100, 255)])
             cv2.imwrite(file_name, my_cards)
             found_cards.append(card_folder)
-    cv2.imshow("My cards", my_cards)
+    if show_image:
+        cv2.imshow("My cards", my_cards)
     return found_cards
 
 
@@ -36,8 +37,8 @@ def print_hand_cards(hand_cards):
     print(hand_cards)
 
 
-# Given a screenshot, returns a list of the detected terrains
-def detect_terrains(screenshot, screenshot_dimensions):
+# Given a screenshot, returns a list of the detected fields
+def detect_fields(screenshot, screenshot_dimensions, show_image):
     fields = config.fields
     for field in fields.keys():
         fields[field]['image'] = screenshot[
@@ -46,46 +47,47 @@ def detect_terrains(screenshot, screenshot_dimensions):
             fields[field]['y1']:
             screenshot_dimensions[1]-fields[field]['y2']
         ]
-        for terrain in os.listdir(config.terrain_folder):
-            # Searching for a terrain in the folder.
-            searched_terrain = global_utils.search(
-                config.terrain_folder+"\\"+terrain, fields[field]['image'])
-            if searched_terrain[0] == 1:
-                fields[field]['name'] = terrain[:-4]
+        for available_field in os.listdir(config.fields_folder):
+            # Searching for a field in the folder.
+            searched_field = global_utils.search(
+                config.fields_folder+"\\"+available_field, fields[field]['image'])
+            if searched_field[0] == 1:
+                fields[field]['name'] = available_field[:-4]
                 fields[field]['image'] = global_utils.draw(
-                    fields[field]['image'], searched_terrain, terrain[:-4], [random.randint(100, 255), random.randint(100, 255), random.randint(100, 255)])
+                    fields[field]['image'], searched_field, available_field[:-4], [random.randint(100, 255), random.randint(100, 255), random.randint(100, 255)])
                 cv2.imwrite(config.project_path+"\\tmp\\" +
-                            terrain[:-4]+".png", fields[field]['image'])
-        cv2.imshow(field, fields[field]['image'])
+                            available_field[:-4]+".png", fields[field]['image'])
+        if show_image:
+            cv2.imshow(field, fields[field]['image'])
     return fields
 
 
-# Outputs the terrains found
+# Outputs the fields found
 def print_fields(fields):
     for field in fields.keys():
         print(field + ": " + fields[field]['name'])
 
 
 # Checks a pixel radius for each card field position in order to determine which ones are already filled
-def detect_player_field_cards():
+def detect_player_fields_cards():
     # Detect field cards
-    terrains_my_played_cards = config.terrains_my_played_cards
+    fields_my_played_cards = config.fields_my_played_cards
     player_played_cards = []
-    for my_played_cards in terrains_my_played_cards.keys():
-        terrains_my_played_cards[my_played_cards]['image'] = screenshot[
-            terrains_my_played_cards[my_played_cards]['y1']:
+    for my_played_cards in fields_my_played_cards.keys():
+        fields_my_played_cards[my_played_cards]['image'] = screenshot[
+            fields_my_played_cards[my_played_cards]['y1']:
             screenshot_dimensions[0] -
-            terrains_my_played_cards[my_played_cards]['y2'],
-            terrains_my_played_cards[my_played_cards]['x1']:
+            fields_my_played_cards[my_played_cards]['y2'],
+            fields_my_played_cards[my_played_cards]['x1']:
             screenshot_dimensions[1] -
-            terrains_my_played_cards[my_played_cards]['x2']
+            fields_my_played_cards[my_played_cards]['x2']
         ]
-        for card in terrains_my_played_cards[my_played_cards]['cards']:
+        for card in fields_my_played_cards[my_played_cards]['cards']:
             max_score = 0
             for x in range(10):
                 for y in range(10):
-                    score = screenshot[terrains_my_played_cards[my_played_cards]['cards'][card]
-                                       [1]+x, terrains_my_played_cards[my_played_cards]['cards'][card][0]+y][2]
+                    score = screenshot[fields_my_played_cards[my_played_cards]['cards'][card]
+                                       [1]+x, fields_my_played_cards[my_played_cards]['cards'][card][0]+y][2]
                     if score > max_score:
                         max_score = score
             if max_score > 200:
@@ -96,16 +98,16 @@ def detect_player_field_cards():
 
 
 # Outputs field cards
-def print_player_field_cards(player_played_cards):
+def print_player_fields_cards(player_played_cards):
     print("Player field cards")
-    print("-------------------")
-    print("||" + str(player_played_cards[0])+"|"+str(player_played_cards[1]) +
-          "||"+"|" + str(player_played_cards[4])+"|"+str(player_played_cards[5])+"||"+"|" + str(player_played_cards[8])+"|"+str(player_played_cards[9]) +
-          "||")
-    print("||" + str(player_played_cards[2])+"|"+str(player_played_cards[3]) +
-          "||"+"|" + str(player_played_cards[6])+"|"+str(player_played_cards[7])+"||"+"|" + str(player_played_cards[10])+"|"+str(player_played_cards[11]) +
-          "||")
-    print("-------------------")
+    print("---------------------------")
+    print("| |" + str(player_played_cards[0])+"|"+str(player_played_cards[1]) +
+          "| ||"+" |" + str(player_played_cards[4])+"|"+str(player_played_cards[5])+"| ||"+" |" + str(player_played_cards[8])+"|"+str(player_played_cards[9]) +
+          "| |")
+    print("| |" + str(player_played_cards[2])+"|"+str(player_played_cards[3]) +
+          "| ||"+" |" + str(player_played_cards[6])+"|"+str(player_played_cards[7])+"| ||"+" |" + str(player_played_cards[10])+"|"+str(player_played_cards[11]) +
+          "| |")
+    print("---------------------------")
 
 
 # Give a screenshot, returns the player mana
@@ -121,7 +123,7 @@ def detect_mana(screenshot):
         mana['x2']
     ]
     for mana_haystack in os.listdir(config.mana_folder):
-        # Searching for a terrain in the folder.
+        # Searching for a field in the folder.
         searched_mana = global_utils.search(
             config.mana_folder+"\\"+mana_haystack, mana, 1)
         if searched_mana[0] == 1:
@@ -130,8 +132,9 @@ def detect_mana(screenshot):
 
 
 # Give a screenshot, returns the player turn
-def detect_turn(screenshot):
+def detect_turn(screenshot, show_image):
     turn = config.turn
+    actual_turn = 0
     turn = screenshot[
         turn['y1']:
         screenshot_dimensions[0] -
@@ -140,14 +143,23 @@ def detect_turn(screenshot):
         screenshot_dimensions[1] -
         turn['x2']
     ]
-    cv2.imshow('turn', turn)
-    for turn_haystack in os.listdir(config.turn_folder):
-        # Searching for a terrain in the folder.
+    for turn_haystack in os.listdir(config.turns_folder):
+        # Searching for a field in the folder.
         searched_turn = global_utils.search(
-            config.turn_folder+"\\"+turn_haystack, turn, 1)
+            config.turns_folder+"\\"+turn_haystack, turn, 1)
         if searched_turn[0] == 1:
-            return searched_turn
-    return 0
+            searched_turn_image = global_utils.draw(
+                turn, searched_turn, turn_haystack[:-4], [random.randint(100, 255), random.randint(100, 255), random.randint(100, 255)])
+            if show_image:
+                cv2.imshow(turn_haystack[:-4], searched_turn_image)
+            if turn_haystack[0] != 'f' and turn_haystack[0] != "c":
+                if int(turn_haystack[0]) > actual_turn:
+                    actual_turn = int(turn_haystack[0])
+            elif turn_haystack[0] == 'f':
+                return -1
+            else:
+                return -2
+    return actual_turn
 
 
 logging.basicConfig(format='%(asctime)s %(message)s',
@@ -163,22 +175,24 @@ while 1:
     screenshot_dimensions = screenshot.shape
 
     # Detect my cards
-    # hand_cards = detect_my_hand_cards(screenshot, screenshot_dimensions)
-    # print_hand_cards(hand_cards)
+    hand_cards = detect_my_hand_cards(screenshot, screenshot_dimensions, False)
+    print_hand_cards(hand_cards)
 
-    # Detect terrains
-    #fields = detect_terrains(screenshot, screenshot_dimensions)
-    # print_fields(fields)
+    # Detect fields
+    fields = detect_fields(screenshot, screenshot_dimensions, False)
+    print_fields(fields)
 
     # Detect field cards
-    #player_played_cards = detect_player_field_cards()
-    # print_player_field_cards(player_played_cards)
+    player_played_cards = detect_player_fields_cards()
+    print_player_fields_cards(player_played_cards)
 
     # Detect mana
-    #remaining_mana = detect_mana(screenshot)
+    remaining_mana = detect_mana(screenshot)
+    print('remaining_mana: ' + str(remaining_mana))
 
     # Detect turn
-    #turn = detect_turn(screenshot)
+    turn = detect_turn(screenshot, False)
+    print('turn: ' + str(turn))
 
     # Printing information
     print("---------------------")

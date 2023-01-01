@@ -1,9 +1,9 @@
 adb_path = 'D:\\JocsPC\\Nox\\bin'
 project_path = 'F:\\WebPages\\Bots\\marvelSnapBot'
 images_folder = "F:\\WebPages\\Bots\\marvelSnapBot\\images"
-terrain_folder = "F:\\WebPages\\Bots\\marvelSnapBot\\images\\terrain"
+fields_folder = "F:\\WebPages\\Bots\\marvelSnapBot\\images\\fields"
 mana_folder = "F:\\WebPages\\Bots\\marvelSnapBot\\images\\mana"
-turn_folder = "F:\\WebPages\\Bots\\marvelSnapBot\\images\\turns"
+turns_folder = "F:\\WebPages\\Bots\\marvelSnapBot\\images\\turns"
 data_folder = "F:\\WebPages\\Bots\\marvelSnapBot\\data"
 first_field = {
     'name': 'First field',
@@ -71,7 +71,7 @@ third_terrain_my_played_cards = {
         'forth_card': [809, 1053],
     }
 }
-terrains_my_played_cards = {
+fields_my_played_cards = {
     'first_terrain_my_played_cards': first_terrain_my_played_cards,
     'second_terrain_my_played_cards': second_terrain_my_played_cards,
     'third_terrain_my_played_cards': third_terrain_my_played_cards
