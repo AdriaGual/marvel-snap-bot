@@ -30,6 +30,8 @@
   <a href="#improvements">Improvements</a>
 </p>
 
+![Animation](https://user-images.githubusercontent.com/25803231/210187037-1d01c383-95ff-481a-99e3-566fe0e93715.gif)
+
 ![Capture](https://user-images.githubusercontent.com/25803231/210183326-e543da5a-ef14-44e5-8cd5-770eec453c02.PNG)
 
 ## Key Features
