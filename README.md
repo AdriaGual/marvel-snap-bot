@@ -13,8 +13,10 @@
     <img src="https://badgen.net/badge/python/3.8/pink?icon=terminal"
          alt="Python">
   </a>
-  <a href="https://gitter.im/amitmerchant1990/electron-markdownify"><img src="https://badges.gitter.im/amitmerchant1990/electron-markdownify.svg"></a>
-  <a href="https://saythanks.io/to/bullredeyes@gmail.com">
+  <a href="https://img.shields.io/github/repo-size/AdriaGual/marvel-snap-bot">
+    <img src="https://badges.gitter.im/amitmerchant1990/electron-markdownify.svg">
+  </a>
+  <a href="https://pypi.org/">
       <img src="https://img.shields.io/badge/SayThanks.io-%E2%98%BC-1EAEDB.svg">
   </a>
   <a href="https://opensource.org/licenses/MIT">
