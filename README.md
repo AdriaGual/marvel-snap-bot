@@ -9,9 +9,9 @@
 <h4 align="center">A computer vision bot made with <a href="https://opencv.org/" target="_blank">OpenCV</a> and <a href="https://developer.android.com/studio/command-line/adb" target="_blank">ADB</a>.</h4>
 
 <p align="center">
-  <a href="https://badge.fury.io/js/electron-markdownify">
-    <img src="https://badgen.net/badge/:subject/:status/:color?icon=github"
-         alt="Gitter">
+  <a href="www.python.org">
+    <img src="https://badgen.net/badge/python/3.8/pink?icon=terminal"
+         alt="Python">
   </a>
   <a href="https://gitter.im/amitmerchant1990/electron-markdownify"><img src="https://badges.gitter.im/amitmerchant1990/electron-markdownify.svg"></a>
   <a href="https://saythanks.io/to/bullredeyes@gmail.com">
