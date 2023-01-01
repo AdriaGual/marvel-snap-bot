@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="https://www.marvelsnap.com"><img src="https://raw.githubusercontent.com/amitmerchant1990/electron-markdownify/master/app/img/markdownify.png" alt="Markdownify" width="200"></a>
+  <a href="https://www.marvelsnap.com"><img src="https://user-images.githubusercontent.com/25803231/210183311-556aafb7-1690-4a17-a958-9c622d8f6f07.png" alt="Markdownify" width="200"></a>
   <br>
   Marvel Snap Bot
   <br>
@@ -29,6 +29,7 @@
 </p>
 
 ![screenshot](https://raw.githubusercontent.com/amitmerchant1990/electron-markdownify/master/app/img/markdownify.gif)
+![Capture](https://user-images.githubusercontent.com/25803231/210183326-e543da5a-ef14-44e5-8cd5-770eec453c02.PNG)
 
 ## Key Features
 
