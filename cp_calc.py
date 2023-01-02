@@ -1,13 +1,19 @@
 import cp_list
 import field_list
 import random
+import config
 
 
+# A field is full if there are 3 or more tiles filled
 def check_field_available(field):
+    count = 0
     for tile in field:
-        if tile != 'x':
-            return True
-    return False
+        if tile == 'x':
+            count += 1
+    if count >= 3:
+        return False
+    else:
+        return True
 
 
 def remove_full_fields(play_info):
@@ -39,9 +45,6 @@ def calc_play(play_info):
             max_cp_play = cp_list.cps[hand_card[0]]['average_cp']
             card_to_play = hand_card
             mana -= cp_list.cps[hand_card[0]]['mana']
-    play_info['mana'] = mana
-    if card_to_play in play_info['my_hand_cards']:
-        play_info['my_hand_cards'].remove(card_to_play)
     if not card_to_play:
         return [0, 0, 0, play_info]
     print(card_to_play)
@@ -73,4 +76,6 @@ def calc_play(play_info):
             else:
                 return [0, 0, 0, play_info]
     else:
-        return [0, 0, 0, play_info]
+        possible_fields = [[198, 1036], [455, 1036], [711, 1036]]
+        for possible_field in possible_fields:
+            return [1, card_to_play[1], possible_field, play_info]
