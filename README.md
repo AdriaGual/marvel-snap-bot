@@ -71,7 +71,7 @@ $ python start.py
 > **Note**
 > In order to see the bot start, you must install the game (Marvel Snap Bot) on Bluestacks and start it.
 
-## Improvement
+## Improvements
 
 There are plenty of improvements still, here's a bunch of:
 
