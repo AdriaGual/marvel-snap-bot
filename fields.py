@@ -28,7 +28,7 @@ def get_fields(screenshot, screenshot_dimensions, show_image):
                 cv2.imwrite(config.project_path+"\\tmp\\" +
                             available_field[:-4]+".png", fields[field]['image'])
         if show_image:
-            cv2.imshow(field, fields[field]['image'])
+            cv2.imshow(fields[field]['name'], fields[field]['image'])
     end = global_utils.end_timer()
     global_utils.log_time_elapsed(
         "get_fields", end-start)

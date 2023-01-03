@@ -60,7 +60,10 @@ while 1:
         # Add a little sleep to reduce resource consumption
         time.sleep(0.5)
 
+    screenshot = global_utils.take_screenshot("tmp\\"+str(counter)+".png")
+    screenshot_dimensions = screenshot.shape
     # When we get the turn, we look for the other information (mana, hand cards, fields, cards in the field)
+
     play_info = info.get_info(
         counter, screenshot, screenshot_dimensions, player_turn)
 

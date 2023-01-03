@@ -5,9 +5,6 @@ import hand_cards
 import fields
 import field_cards
 import mana
-import turn
-import time
-import config
 
 
 # Gets all the possible information from the screen

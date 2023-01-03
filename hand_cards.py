@@ -5,6 +5,7 @@ import config
 import random
 import logging
 import cp_calc
+import time
 
 # Given a screenshot of the hand cards, returns a list of the detected cards
 
@@ -60,14 +61,17 @@ def play_random_cards():
         for possible_field in config.possible_fields:
             global_utils.drag(possible_card, possible_field)
             global_utils.click([284, 46])
+            time.sleep(0.2)
 
 
 # Play a certain card in hand to every possible field
 def play_a_card_to_every_field(card_position):
     for possible_field in config.possible_fields:
-        global_utils.drag(
-            [card_position[0]+20, card_position[1]+1200], possible_field)
-        global_utils.click([284, 46])
+        if len(card_position) > 0:
+            global_utils.drag(
+                [card_position[0]+20, card_position[1]+1200], possible_field)
+            global_utils.click([284, 46])
+            time.sleep(0.2)
 
 
 # Make a turn play

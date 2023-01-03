@@ -47,7 +47,7 @@ def calc_play(play_info):
             card_to_play = hand_card
             mana -= cp_list.cps[hand_card[0]]['mana']
     if not card_to_play:
-        return [0, 0, 0, play_info]
+        return [0, [0, 0], [0, 0], play_info]
 
     # Pick field to play the card
     active_fields = remove_full_fields(play_info)
@@ -73,8 +73,7 @@ def calc_play(play_info):
             if field_list.list[field_name]['min_play'] == 1:
                 return [1, card_to_play[1], active_fields[field]['move_to'], play_info]
             else:
-                return [0, 0, 0, play_info]
+                return [0, [0, 0], [0, 0], play_info]
     else:
-        possible_fields = [[198, 1036], [455, 1036], [711, 1036]]
-        for possible_field in possible_fields:
+        for possible_field in config.possible_fields:
             return [1, card_to_play[1], possible_field, play_info]

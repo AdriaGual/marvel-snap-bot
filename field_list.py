@@ -185,4 +185,26 @@ list = {
         'play_cards_here_turn': -1,
         'priority_cards': []
     },
+    'mojoworld': {
+        'priority': 3,
+        'min_play': 0,
+        'same_location': False,
+        'play_cards_here_turn': -1,
+        'priority_cards': []
+    },
+    'mojoworld': default_config,
+    'the_ice_box': default_config,
+    'limbo': default_config,
+    'titan': default_config,
+    'hellfire_club': default_config,
+    'atlantis': default_config,
+    'miniaturized_lab': default_config,
+    'miniaturized_lab_2': default_config,
+    'the_big_house': {
+        'priority': 1,
+        'min_play': 0,
+        'same_location': False,
+        'play_cards_here_turn': -1,
+        'priority_cards': []
+    },
 }
