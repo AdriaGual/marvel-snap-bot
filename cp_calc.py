@@ -47,7 +47,6 @@ def calc_play(play_info):
             mana -= cp_list.cps[hand_card[0]]['mana']
     if not card_to_play:
         return [0, 0, 0, play_info]
-    print(card_to_play)
 
     # Pick field to play the card
     active_fields = remove_full_fields(play_info)
@@ -56,7 +55,6 @@ def calc_play(play_info):
     if len(active_fields.keys()) > 1:
         for field in active_fields:
             field_name = active_fields[field]['name']
-            print(field_name)
             if field_list.list[field_name]['priority'] > priority and field_list.list[field_name]['min_play'] == 1:
                 priority = field_list.list[field_name]['priority']
                 priority_field = active_fields[field]

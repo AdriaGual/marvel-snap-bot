@@ -124,4 +124,10 @@ cps = {
         'max_cp': 2,
         'average_cp': 2
     },
+    'captain_america': {
+        'mana': 3,
+        'base_cp': 3,
+        'max_cp': 6,
+        'average_cp': 6
+    },
 }
