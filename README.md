@@ -79,6 +79,7 @@ There are plenty of improvements still, here's a bunch of:
 - The points of each field is not tracked, it can be done with pytesseract
 - The cards on the player field don't show the power
 - Detect the enemy cards on the field
+- Keep track of the winrate of a session
 
 ## License
 
