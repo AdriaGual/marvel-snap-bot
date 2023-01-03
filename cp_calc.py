@@ -16,6 +16,7 @@ def check_field_available(field):
         return True
 
 
+# Check if any of the fields has 3 or more tiles filled
 def remove_full_fields(play_info):
     first_field_available = check_field_available(
         play_info['player_played_cards'][0:4])

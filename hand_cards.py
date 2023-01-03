@@ -70,6 +70,7 @@ def play_a_card_to_every_field(card_position):
         global_utils.click([284, 46])
 
 
+# Make a turn play
 def play_cards(play_info, last_move):
     # If we have mana to play
     if play_info['mana'] > 0:
