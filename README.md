@@ -64,6 +64,32 @@ $ cd marvel-snap-bot
 # Install dependencies
 $ pip install -r requirements.txt
 
+# Edit the config.py file
+adb_path: Absolute path to where you can execute [ADB](https://developer.android.com/studio/command-line/adb)
+project_path: Absolute path to the project
+images_folder: Absolute path to the images folder
+fields_folder: Absolute path to the fields images folder
+mana_folder: Absolute path to the mana images folder
+turns_folder: Absolute path to the turns folder
+data_folder: Absolute path to the card images folder
+tmp_path: Absolute path to a tmp folder
+
+# Make sure that Bluestacks has the ADB enabled
+Settings -> Advanced -> Android Debug Bridge (ADB)
+
+# Check if you have the correct resolution
+The script is made to work on 1600x900 resolution
+
+# Add the images to the each folder
+You can grab them from the emulator, there's an option on the script to get the info in real time
+
+# Card images structure folder
+Remember that this cards need its values entered manually on the cp_list.py file
+![image](https://user-images.githubusercontent.com/25803231/211023744-f587976f-be89-41a8-a798-619c8209d29e.png)
+
+# Images structure folder
+![image](https://user-images.githubusercontent.com/25803231/211023945-26312bae-9ac6-437e-82f8-18c1d9140d94.png)
+
 # Run the bot
 $ python start.py
 ```
