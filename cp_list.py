@@ -130,4 +130,10 @@ cps = {
         'max_cp': 6,
         'average_cp': 6
     },
+    'spectrum': {
+        'mana': 6,
+        'base_cp': 5,
+        'max_cp': 27,
+        'average_cp': 25
+    },
 }

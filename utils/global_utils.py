@@ -22,7 +22,7 @@ def search(haystack_image_path, screenshot, precision=0):
     result = cv2.matchTemplate(haystack_image, screenshot, method)
     min_val, _, min_loc, _ = cv2.minMaxLoc(result)
     mp_x, mp_y = min_loc
-    threshold = 0.16
+    threshold = 0.14
     if precision:
         threshold = 0.03
     if min_val < threshold:
