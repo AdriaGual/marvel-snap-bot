@@ -198,6 +198,7 @@ list = {
     'titan': default_config,
     'hellfire_club': default_config,
     'atlantis': default_config,
+    'altar_of_death': default_config,
     'miniaturized_lab': default_config,
     'miniaturized_lab_2': default_config,
     'the_big_house': {
