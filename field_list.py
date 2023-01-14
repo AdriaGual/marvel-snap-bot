@@ -33,6 +33,7 @@ list = {
         'priority_cards': []
     },
     'wakandan_embassy': default_config,
+    'new_york': default_config,
     'vormir': {
         'priority': -2,
         'min_play': 2,
