@@ -7,9 +7,8 @@ import logging
 import cp_calc
 import time
 
+
 # Given a screenshot of the hand cards, returns a list of the detected cards
-
-
 def get_my_hand_cards(screenshot, screenshot_dimensions, counter, show_image):
     start = global_utils.start_timer()
     file_name = config.project_path+"\\tmp\\hand_cards_" + str(counter)+".png"

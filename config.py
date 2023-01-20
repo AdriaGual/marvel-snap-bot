@@ -1,11 +1,15 @@
 adb_path = 'D:\\JocsPC\\Nox\\bin'
 project_path = 'F:\\WebPages\\Bots\\marvelSnapBot'
-images_folder = "F:\\WebPages\\Bots\\marvelSnapBot\\images"
-fields_folder = "F:\\WebPages\\Bots\\marvelSnapBot\\images\\fields"
-mana_folder = "F:\\WebPages\\Bots\\marvelSnapBot\\images\\mana"
-turns_folder = "F:\\WebPages\\Bots\\marvelSnapBot\\images\\turns"
-data_folder = "F:\\WebPages\\Bots\\marvelSnapBot\\data"
-tmp_path = 'F:\\WebPages\\Bots\\marvelSnapBot\\tmp'
+images_folder = project_path + '\\images'
+fields_folder = images_folder + '\\fields'
+mana_folder = images_folder + '\\mana'
+turns_folder = images_folder + '\\turns'
+data_folder = project_path + '\\data'
+tmp_path = project_path + '\\tmp'
+tmp_image_without_bg_path = tmp_path + \
+    '\\hand_cards_number_without_background.png'
+tmp_hand_cards_number_path = tmp_path + '\\hand_cards_number.png'
+
 first_field = {
     'name': 'First field',
     'x1': 610,

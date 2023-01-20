@@ -105,6 +105,20 @@ list = {
         'play_cards_here_turn': -1,
         'priority_cards': ['kaazar', 'blue_marvel']
     },
+    'negative_zone': {
+        'priority': -3,
+        'min_play': 1,
+        'same_location': False,
+        'play_cards_here_turn': -1,
+        'priority_cards': []
+    },
+    'lechuguilla': {
+        'priority': -2,
+        'min_play': 1,
+        'same_location': False,
+        'play_cards_here_turn': -1,
+        'priority_cards': []
+    },
     'kamar_taj': default_config,
     'monster_island': default_config,
     'xmansion': default_config,

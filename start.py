@@ -62,13 +62,12 @@ while 1:
 
     screenshot = global_utils.take_screenshot("tmp\\"+str(counter)+".png")
     screenshot_dimensions = screenshot.shape
-    # When we get the turn, we look for the other information (mana, hand cards, fields, cards in the field)
 
+    # When we get the turn, we look for the other information (mana, hand cards, fields, cards in the field)
     play_info = info.get_info(
         counter, screenshot, screenshot_dimensions, player_turn)
 
     # Play cards
     last_move = hand_cards.play_cards(play_info, last_move)
-
-    time.sleep(0.2)
+    counter += 1
     clear_tmp.clear()
