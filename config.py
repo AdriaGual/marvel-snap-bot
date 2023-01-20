@@ -6,6 +6,7 @@ mana_folder = images_folder + '\\mana'
 turns_folder = images_folder + '\\turns'
 data_folder = project_path + '\\data'
 tmp_path = project_path + '\\tmp'
+example_data_path = images_folder + '\\example_data'
 tmp_image_without_bg_path = tmp_path + \
     '\\hand_cards_number_without_background.png'
 tmp_hand_cards_number_path = tmp_path + '\\hand_cards_number.png'

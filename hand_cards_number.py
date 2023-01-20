@@ -1,11 +1,7 @@
-from utils import global_utils, android_connection
+from utils import global_utils
 from PIL import Image
 import cv2
-import os
 import config
-import random
-import logging
-import cp_calc
 from rembg import remove
 
 condition_blue_range = {
@@ -27,8 +23,8 @@ condition_sky_blue_range = {
 }
 
 condition_dark_blue_range = {
-    'red': [15, 35],
-    'green': [20, 45],
+    'red': [10, 35],
+    'green': [10, 45],
     'blue': [40, 80],
 }
 
@@ -45,7 +41,7 @@ condition_dark_brown_range = {
 }
 
 condition_purple_range = {
-    'red': [40, 45],
+    'red': [30, 45],
     'green': [15, 25],
     'blue': [35, 60],
 }
@@ -124,7 +120,8 @@ def is_in_color_range(r, g, b):
                        and b >= condition_white_range['blue'][0] and b <= condition_white_range['blue'][1])
     condition_blue_exact = r == blue_exact[0] and g == blue_exact[1] and b == blue_exact[2]
 
-    if condition_blue or condition_light_blue or condition_sky_blue or condition_dark_blue or condition_dark_brown or condition_purple or condition_brown or condition_dark_purple or condition_light_pink or condition_red or condition_white or condition_blue_exact:
+    # if condition_blue or condition_light_blue or condition_sky_blue or condition_dark_blue or condition_dark_brown or condition_purple or condition_brown or condition_dark_purple or condition_light_pink or condition_red or condition_white or condition_blue_exact:
+    if condition_dark_brown or condition_brown or condition_dark_purple or condition_light_pink or condition_red or condition_purple or condition_white or condition_blue_exact:
         return True
     else:
         return False
@@ -140,7 +137,7 @@ def cards_range(x, y):
         return 3
     elif x > 600 and x < 700:
         return 4
-    elif x > 700 and x < 740:
+    elif x > 700 and x < 730:
         return 6
     else:
         if y > 200:
@@ -150,13 +147,16 @@ def cards_range(x, y):
 
 
 # Get the number of cards
-def get_hand_cards_number(show_images, screenshot, screenshot_dimensions):
+def get_hand_cards_number(show_images, screenshot, screenshot_dimensions, full_screen):
     start = global_utils.start_timer()
-    my_cards = screenshot[config.card_hand['x']:screenshot_dimensions[0] -
-                          config.card_hand['y'], 0:screenshot_dimensions[1]]
+
+    if full_screen:
+        my_cards = screenshot[config.card_hand['x']:screenshot_dimensions[0] -
+                              config.card_hand['y'], 0:screenshot_dimensions[1]]
+    else:
+        my_cards = screenshot
 
     cv2.imwrite(config.tmp_hand_cards_number_path, my_cards)
-
     image = Image.open(config.tmp_hand_cards_number_path)
     image_data = image.load()
     height, width = image.size
@@ -192,14 +192,4 @@ def get_hand_cards_number(show_images, screenshot, screenshot_dimensions):
     end = global_utils.end_timer()
     global_utils.log_time_elapsed(
         "get_my_hand_cards_number", end-start)
-
     return cards_range(extRight[0]-extLeft[0], extBot[1]-extTop[1])
-
-
-android_connection.connect()
-
-screenshot = global_utils.take_screenshot(
-    "tmp\\"+"hand_cards_screenshot.png")
-screenshot_dimensions = screenshot.shape
-
-print(get_hand_cards_number(False, screenshot, screenshot_dimensions))

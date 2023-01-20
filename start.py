@@ -6,9 +6,10 @@ import time
 import config
 import turn
 import clear_tmp
+import sys
 
-logging.basicConfig(filename='log.txt', filemode='w', format='%(asctime)s %(message)s',
-                    datefmt='%m/%d/%Y %I:%M:%S %p', level=logging.INFO)
+logging.basicConfig(filename=config.project_path+'\\log.txt', filemode='w', format='%(asctime)s %(message)s',
+                    datefmt='%m/%d/%Y %I:%M:%S %p', level=logging.DEBUG)
 logging.getLogger().addHandler(logging.StreamHandler())
 
 android_connection.connect()
@@ -70,4 +71,5 @@ while 1:
     # Play cards
     last_move = hand_cards.play_cards(play_info, last_move)
     counter += 1
+
     clear_tmp.clear()
