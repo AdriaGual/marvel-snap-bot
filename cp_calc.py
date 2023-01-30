@@ -10,7 +10,7 @@ def check_field_available(field):
     for tile in field:
         if tile == 'x':
             count += 1
-    if count >= 3:
+    if count >= 2:
         return False
     else:
         return True
@@ -40,12 +40,14 @@ def calc_play(play_info):
     max_cp_play = 0
     card_to_play = None
     mana = play_info['mana']
+    tmp_mana = mana
     # Pick the card to play
     for hand_card in play_info['my_hand_cards']:
         if cp_list.cps[hand_card[0]]['average_cp'] > max_cp_play and cp_list.cps[hand_card[0]]['mana'] <= play_info['mana']:
             max_cp_play = cp_list.cps[hand_card[0]]['average_cp']
             card_to_play = hand_card
-            mana -= cp_list.cps[hand_card[0]]['mana']
+            tmp_mana = mana - cp_list.cps[hand_card[0]]['mana']
+    mana = tmp_mana
     if not card_to_play:
         return [0, [0, 0], [0, 0], play_info]
 
@@ -53,16 +55,17 @@ def calc_play(play_info):
     active_fields = remove_full_fields(play_info)
     priority = -10
     priority_field = None
-    if len(active_fields.keys()) > 1:
+    if len(active_fields.keys()) > 0:
         for field in active_fields:
             field_name = active_fields[field]['name']
-            if field_list.list[field_name]['priority'] > priority and field_list.list[field_name]['min_play'] == 1:
-                priority = field_list.list[field_name]['priority']
-                priority_field = active_fields[field]
-            elif field_list.list[field_name]['priority'] == priority:
-                if random.randint(0, 1):
+            if field_list.list.get(field_name):
+                if field_list.list[field_name]['priority'] > priority and field_list.list[field_name]['min_play'] == 1:
                     priority = field_list.list[field_name]['priority']
                     priority_field = active_fields[field]
+                elif field_list.list[field_name]['priority'] == priority:
+                    if random.randint(0, 1):
+                        priority = field_list.list[field_name]['priority']
+                        priority_field = active_fields[field]
         if priority_field:
             return [1, card_to_play[1], priority_field['move_to'], play_info]
         else:

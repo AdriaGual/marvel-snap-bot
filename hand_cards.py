@@ -6,6 +6,7 @@ import random
 import logging
 import cp_calc
 import time
+import pyautogui
 
 
 # Given a screenshot of the hand cards, returns a list of the detected cards
@@ -15,16 +16,23 @@ def get_my_hand_cards(screenshot, screenshot_dimensions, counter, show_image):
     my_cards = screenshot[config.card_hand['x']:screenshot_dimensions[0] -
                           config.card_hand['y'], 0:screenshot_dimensions[1]]
     cv2.imwrite(file_name, my_cards)
+    haystack = file_name
     found_cards = []
     for card_folder in os.listdir(config.data_folder):
         card_folder_path = config.data_folder+"\\"+card_folder
-        searched_card = global_utils.search_in_folder(
-            card_folder_path, my_cards)
-        if searched_card[0] == 1:
-            my_cards = global_utils.draw(
-                my_cards, searched_card, card_folder, [random.randint(100, 255), random.randint(100, 255), random.randint(100, 255)])
-            cv2.imwrite(file_name, my_cards)
-            found_cards.append([card_folder, searched_card[1]])
+        for card_haystack in os.listdir(card_folder_path):
+            card_needle = card_folder_path+"\\"+card_haystack
+            card_location = pyautogui.locate(
+                card_needle, haystack, grayscale=True, confidence=0.6)
+            if card_location:
+                already_in_cards_array = False
+                for found_card in found_cards:
+                    if found_card[0] == card_folder:
+                        already_in_cards_array = True
+                if not already_in_cards_array:
+                    card_to_add = [card_folder, [
+                        card_location[0], card_location[1]]]
+                    found_cards.append(card_to_add)
     if show_image:
         cv2.imshow("My cards", my_cards)
     end = global_utils.end_timer()
@@ -44,12 +52,15 @@ def log_hand_cards(hand_cards):
 def try_to_play_every_card(cards, fields):
     for card in cards:
         for field in fields.keys():
+            global_utils.click([284, 46])
             global_utils.drag(
                 [card[1][0]+20, card[1][1]+1200], fields[field]['move_to'])
+            global_utils.click([284, 46])
 
 
 # Play a card to a certain field
 def play_a_card_to_a_field(card_position, field):
+    global_utils.click([284, 46])
     global_utils.drag([card_position[0]+20, card_position[1]+1200], field)
     global_utils.click([284, 46])
 
@@ -58,15 +69,18 @@ def play_a_card_to_a_field(card_position, field):
 def play_random_cards():
     for possible_card in config.possible_cards:
         for possible_field in config.possible_fields:
+            global_utils.click([284, 46])
             global_utils.drag(possible_card, possible_field)
             global_utils.click([284, 46])
             time.sleep(0.2)
+    global_utils.click([770, 1500])
 
 
 # Play a certain card in hand to every possible field
 def play_a_card_to_every_field(card_position):
     for possible_field in config.possible_fields:
         if len(card_position) > 0:
+            global_utils.click([284, 46])
             global_utils.drag(
                 [card_position[0]+20, card_position[1]+1200], possible_field)
             global_utils.click([284, 46])

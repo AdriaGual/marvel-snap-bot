@@ -137,7 +137,7 @@ def cards_range(x, y):
         return 3
     elif x > 600 and x < 700:
         return 4
-    elif x > 700 and x < 730:
+    elif x > 730 and x < 740:
         return 6
     else:
         if y > 200:
@@ -158,14 +158,14 @@ def get_hand_cards_number(show_images, screenshot, screenshot_dimensions, full_s
 
     cv2.imwrite(config.tmp_hand_cards_number_path, my_cards)
     image = Image.open(config.tmp_hand_cards_number_path)
-    image_data = image.load()
-    height, width = image.size
+    #image_data = image.load()
+    #height, width = image.size
 
-    for loop1 in range(height):
-        for loop2 in range(width):
-            r, g, b = image_data[loop1, loop2]
-            if is_in_color_range(r, g, b):
-                image_data[loop1, loop2] = 0, 0, 0
+    # for loop1 in range(height):
+    #    for loop2 in range(width):
+    #        r, g, b = image_data[loop1, loop2]
+    #        if is_in_color_range(r, g, b):
+    #            image_data[loop1, loop2] = 0, 0, 0
     image = remove(image)
     image.save(config.tmp_image_without_bg_path)
     img_1 = cv2.imread(config.tmp_image_without_bg_path)
@@ -188,8 +188,7 @@ def get_hand_cards_number(show_images, screenshot, screenshot_dimensions, full_s
         cv2.imshow('Image2', image)
         cv2.waitKey(0)
         cv2.destroyAllWindows()
-
     end = global_utils.end_timer()
     global_utils.log_time_elapsed(
         "get_my_hand_cards_number", end-start)
-    return cards_range(extRight[0]-extLeft[0], extBot[1]-extTop[1])
+    return [cards_range(extRight[0]-extLeft[0], extBot[1]-extTop[1]), [extLeft[0], extRight[0]]]

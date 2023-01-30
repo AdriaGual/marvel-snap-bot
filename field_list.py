@@ -213,8 +213,52 @@ list = {
     'titan': default_config,
     'hellfire_club': default_config,
     'atlantis': default_config,
-    'altar_of_death': default_config,
+    'altar_of_death': {
+        'priority': -999,
+        'min_play': 0,
+        'same_location': False,
+        'play_cards_here_turn': -1,
+        'priority_cards': []
+    },
+    'danger_room': {
+        'priority': -999,
+        'min_play': 0,
+        'same_location': False,
+        'play_cards_here_turn': -1,
+        'priority_cards': []
+    },
+    'death_domain': {
+        'priority': -999,
+        'min_play': 0,
+        'same_location': False,
+        'play_cards_here_turn': -1,
+        'priority_cards': []
+    },
+    'murderworld': {
+        'priority': -999,
+        'min_play': 0,
+        'same_location': False,
+        'play_cards_here_turn': -1,
+        'priority_cards': []
+    },
+    'rickety_bridge': {
+        'priority': -999,
+        'min_play': 0,
+        'same_location': False,
+        'play_cards_here_turn': -1,
+        'priority_cards': []
+    },
+    'vormir': {
+        'priority': -999,
+        'min_play': 0,
+        'same_location': False,
+        'play_cards_here_turn': -1,
+        'priority_cards': []
+    },
     'miniaturized_lab': default_config,
+    'washington_dc': default_config,
+    'nova_roma': default_config,
+    'oscorp_tower': default_config,
     'miniaturized_lab_2': default_config,
     'the_big_house': {
         'priority': 1,
