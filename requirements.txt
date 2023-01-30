@@ -1,5 +1,5 @@
 numpy==1.21.0
 opencv_python_headless==4.6.0.66
-Pillow==9.4.0
+Pillow==9.3.0
 PyAutoGUI==0.9.53
 rembg==2.0.30
