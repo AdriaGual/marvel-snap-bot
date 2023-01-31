@@ -40,6 +40,12 @@ cps = {
         'max_cp': 4,
         'average_cp': 4
     },
+    'red_skull': {
+        'mana': 5,
+        'base_cp': 7,
+        'max_cp': 7,
+        'average_cp': 7
+    },
     'blade': {
         'mana': 1,
         'base_cp': 3,
@@ -50,7 +56,7 @@ cps = {
         'mana': 4,
         'base_cp': 0,
         'max_cp': 0,
-        'average_cp': 6
+        'average_cp': 8
     },
     'jubilee': {
         'mana': 4,
@@ -63,6 +69,12 @@ cps = {
         'base_cp': 3,
         'max_cp': 14,
         'average_cp': 8
+    },
+    'maximus': {
+        'mana': 3,
+        'base_cp': 7,
+        'max_cp': 7,
+        'average_cp': 7
     },
     'captain_marvel': {
         'mana': 5,
