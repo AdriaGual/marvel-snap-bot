@@ -794,7 +794,7 @@ cps = {
         'mana': 4,
         'base_cp': 0,
         'max_cp': 20,
-        'average_cp': 0
+        'average_cp': 8
     },
     'drax': {
         'mana': 4,
