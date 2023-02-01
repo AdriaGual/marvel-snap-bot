@@ -205,7 +205,7 @@ cps = {
     'bishop': {
         'mana': 3,
         'base_cp': 1,
-        'max_cp': 12,
+        'max_cp': 5,
         'average_cp': 5
     },
     'klaw': {
@@ -793,7 +793,7 @@ cps = {
     'dracula': {
         'mana': 4,
         'base_cp': 0,
-        'max_cp': 20,
+        'max_cp': 0,
         'average_cp': 8
     },
     'drax': {
