@@ -4,6 +4,12 @@
 # max_cp -> max cp that can achieve by itself
 # average_cp -> average value that gives to the board
 cps = {
+    'angela': {
+        'mana': 2,
+        'base_cp': 0,
+        'max_cp': 6,
+        'average_cp': 2
+    },
     'abomination': {
         'mana': 5,
         'base_cp': 9,
@@ -285,12 +291,6 @@ cps = {
         'base_cp': 7,
         'max_cp': 7,
         'average_cp': 7
-    },
-    'angela': {
-        'mana': 2,
-        'base_cp': 0,
-        'max_cp': 6,
-        'average_cp': 2
     },
     'captain_america': {
         'mana': 2,
