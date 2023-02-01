@@ -104,7 +104,7 @@ cps = {
         'mana': 1,
         'base_cp': 1,
         'max_cp': 4,
-        'average_cp': 1
+        'average_cp': 4
     },
     'spectrum': {
         'mana': 6,
@@ -163,8 +163,8 @@ cps = {
     'apocalypse': {
         'mana': 6,
         'base_cp': 8,
-        'max_cp': 20,
-        'average_cp': 8
+        'max_cp': 26,
+        'average_cp': 16
     },
     'devil_dinosaur': {
         'mana': 5,
@@ -193,8 +193,8 @@ cps = {
     'blue_marvel': {
         'mana': 5,
         'base_cp': 3,
-        'max_cp': 3,
-        'average_cp': 3
+        'max_cp': 14,
+        'average_cp': 8
     },
     'squirrel_girl': {
         'mana': 1,
@@ -692,7 +692,7 @@ cps = {
         'mana': 5,
         'base_cp': 6,
         'max_cp': 6,
-        'average_cp': 6
+        'average_cp': 14
     },
     'cerebro': {
         'mana': 3,
