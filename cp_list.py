@@ -85,8 +85,8 @@ cps = {
     'kazar': {
         'mana': 4,
         'base_cp': 4,
-        'max_cp': 4,
-        'average_cp': 4
+        'max_cp': 15,
+        'average_cp': 9
     },
     'mister_fantastic': {
         'mana': 3,
@@ -109,8 +109,8 @@ cps = {
     'spectrum': {
         'mana': 6,
         'base_cp': 5,
-        'max_cp': 5,
-        'average_cp': 5
+        'max_cp': 27,
+        'average_cp': 25
     },
     'night_crawler': {
         'mana': 1,
@@ -427,8 +427,8 @@ cps = {
     'sunspot': {
         'mana': 1,
         'base_cp': 1,
-        'max_cp': 27,
-        'average_cp': 2
+        'max_cp': 10,
+        'average_cp': 7
     },
     'iceman': {
         'mana': 1,
@@ -512,7 +512,7 @@ cps = {
         'mana': 2,
         'base_cp': 0,
         'max_cp': 10,
-        'average_cp': 0
+        'average_cp': 8
     },
     'swarm': {
         'mana': 2,
@@ -769,8 +769,8 @@ cps = {
     'doctor_doom': {
         'mana': 6,
         'base_cp': 5,
-        'max_cp': 5,
-        'average_cp': 5
+        'max_cp': 15,
+        'average_cp': 15
     },
     'doombot': {
         'mana': 6,
@@ -854,7 +854,7 @@ cps = {
         'mana': 4,
         'base_cp': 3,
         'max_cp': 3,
-        'average_cp': 3
+        'average_cp': 8
     },
     'ghost_spider': {
         'mana': 2,
@@ -900,9 +900,9 @@ cps = {
     },
     'hela': {
         'mana': 6,
-        'base_cp': 6,
-        'max_cp': 6,
-        'average_cp': 6
+        'base_cp': 50,
+        'max_cp': 50,
+        'average_cp': 50
     },
     'helicarrier': {
         'mana': 6,
@@ -956,7 +956,7 @@ cps = {
         'mana': 4,
         'base_cp': 1,
         'max_cp': 1,
-        'average_cp': 1
+        'average_cp': 4
     },
     'juggernaut': {
         'mana': 3,
@@ -1394,7 +1394,7 @@ cps = {
         'mana': 5,
         'base_cp': 0,
         'max_cp': 20,
-        'average_cp': 0
+        'average_cp': 8
     },
     'thanos': {
         'mana': 6,
@@ -1494,9 +1494,9 @@ cps = {
     },
     'ultron': {
         'mana': 6,
-        'base_cp': 8,
-        'max_cp': 8,
-        'average_cp': 8
+        'base_cp': 12,
+        'max_cp': 12,
+        'average_cp': 12
     },
     'drone': {
         'mana': 1,
